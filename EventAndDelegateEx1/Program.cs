@@ -33,18 +33,14 @@ namespace EventAndDelegateEx1
 
         private static void Sp_completeProcess()
         {
-            Console.WriteLine("\n Welocme to the World of friends");
+            Console.WriteLine("\n Hello World");
         }
 
         private static void Abe_Addnumbers(object sender, EventArgs e)
         {
-            Console.WriteLine("\n Event is Executed.....");
-        }
-        
-       
+            Console.WriteLine("\n Run Event.");
+        }      
     }
-    
-
 }
 
 public class StartProgram
@@ -55,7 +51,7 @@ public class StartProgram
 
     public void StartProcess()
     {
-        Console.WriteLine("\n Process started");
+        Console.WriteLine("\n Running Process");
         Console.ReadLine();
         OnCompletedProcess();
     }
@@ -72,13 +68,13 @@ public class EventDelegate
     public event Sum Plus;
     public void process()
     {
-        Console.WriteLine("\n Process Started");
+        Console.WriteLine("\n Running Process");
         Console.ReadLine();
         OnSumProcess();
     }
     private void OnSumProcess()
     {
-        Plus.Invoke(30, 40);
+        Plus.Invoke(20, 20);
         Console.Read();
     }
 }
